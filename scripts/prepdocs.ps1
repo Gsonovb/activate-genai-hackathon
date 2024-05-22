@@ -34,17 +34,6 @@ cd genai
 
 azd init -t https://github.com/Sumit-azure/azure-search-openai-demo -e activate-genai -s $subid -l $location
 
-$envContent = "AZURE_RESOURCE_GROUP=`"$rgname`""
-$envContent1 = "AZURE_LOCATION=`"$location`""
-$envContent2 = "AZURE_SUBSCRIPTION_ID=`"$subid`""
-
-
-
-
-
-# Specify the path to the .env file
-$envFilePath = "C:\azure-search-openai-demo\.azure\activegenai\.env"
-
 
 Write-Host "Navigate to browser to complete the Azure login"
 azd auth login
