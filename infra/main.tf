@@ -68,27 +68,8 @@ resource "azurerm_role_assignment" "id_reader" {
   principal_id         = module.mi.principal_id
 }
 
-module "search" {
-  source              = "./modules/search"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  search_name         = local.search_name
-  principal_id        = module.mi.principal_id
-}
 
-module "form_recognizer" {
-  source               = "./modules/form"
-  location             = azurerm_resource_group.rg.location
-  resource_group_name  = azurerm_resource_group.rg.name
-  form_recognizer_name = local.form_recognizer_name
-}
 
-module "log" {
-  source              = "./modules/log"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  log_name            = var.log_name
-}
 
 module "appi" {
   source              = "./modules/appi"
@@ -98,22 +79,9 @@ module "appi" {
   log_id              = module.log.log_id
 }
 
-module "st" {
-  source               = "./modules/st"
-  location             = azurerm_resource_group.rg.location
-  resource_group_name  = azurerm_resource_group.rg.name
-  storage_account_name = local.storage_account_name
-  principal_id         = module.mi.principal_id
-}
 
-module "openai" {
-  source              = "./modules/openai"
-  location            = azurerm_resource_group.rg.location
-  resource_group_name = azurerm_resource_group.rg.name
-  secondary_location  = var.secondary_location
-  azopenai_name       = local.azopenai_name
-  principal_id        = module.mi.principal_id
-}
+
+
 
 module "cae" {
   source            = "./modules/cae"
