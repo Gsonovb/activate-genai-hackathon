@@ -45,12 +45,8 @@ $envContent2 = "AZURE_SUBSCRIPTION_ID=`"$subid`""
 # Specify the path to the .env file
 $envFilePath = "C:\azure-search-openai-demo\.azure\activegenai\.env"
 
-# Add content to the file
-Add-Content -Path $envFilePath -Value $envContent
-Add-Content -Path $envFilePath -Value $envContent1
-Add-Content -Path $envFilePath -Value $envContent2
-Add-Content -Path $envFilePath -Value $envContent3
 
+Write-Host "Navigate to browser to complete the Azure login"
 azd auth login
 
 azd up -e activate-genai
