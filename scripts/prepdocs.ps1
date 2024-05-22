@@ -32,7 +32,7 @@ cd genai
 
 
 
-azd init -t https://github.com/Azure-Samples/azure-search-openai-demo -e activate-genai -s $subid -l $location
+azd init -t https://github.com/Sumit-azure/azure-search-openai-demo -e activate-genai -s $subid -l $location
 
 $envContent = "AZURE_RESOURCE_GROUP=`"$rgname`""
 $envContent1 = "AZURE_LOCATION=`"$location`""
