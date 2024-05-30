@@ -5,7 +5,7 @@ variable "suffix" {
 
 # 资源组
 variable "resource_group_name" {
-  default = "ODL-GenAI-CL-1332115-01"
+  default = "rg-activate-genai"
 }
 
 # 位置

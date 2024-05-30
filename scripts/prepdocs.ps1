@@ -32,12 +32,12 @@ cd genai
 
 
 
-azd init -t https://github.com/Sumit-azure/azure-search-openai-demo -e activate-genai -s $subid -l $location
+azd init -t https://github.com/Sumit-azure/azure-search-openai-demo -e activate-genai-guan -s $subid -l $location
 
 
 Write-Host "Navigate to browser to complete the Azure login"
 azd auth login
 
-azd up -e activate-genai
+azd up -e activate-genai-guan
 
 
